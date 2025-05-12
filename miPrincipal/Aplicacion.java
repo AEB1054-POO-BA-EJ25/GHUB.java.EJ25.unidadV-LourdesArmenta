@@ -1,5 +1,5 @@
 package miPrincipal;
-import java.io.FileInputStream:
+import java.io.FileInputStream;
 import java.util.Properties;
 
 public class Aplicacion {
@@ -15,14 +15,26 @@ public class Aplicacion {
             String usr = p.getProperty("usrname");
 
             //leemos el valos de la porpiedad de password
-            String pwd = ´p.getProperty("password");
+            String pwd =p.getProperty("password");
 
             //definimos la variable de retorno
+            Usuario u = null;
+
+            if (usr.equals(usrname) && pwd.equals(password))
+            {
+                //instanciamos y setteamis todos los datos
+                u = new Usuario();
+                u.setNombreUsuario(usr);
+                u.setContrasena(pwd);
+                u.setNombreUsuario(p.getProperty("nombre"));
+                u.setEmail(p.getProperty("email"));  
+            }
+            //retornamos la instancia o null si no entramos al if
+            return u;
            
-
-
-        }catch(){
-
+        }catch( Exception ex){
+            //cualquier error "salgo por exception"
+            throw new RuntimeException("Error verificando datos",ex);
         }
     }
     
