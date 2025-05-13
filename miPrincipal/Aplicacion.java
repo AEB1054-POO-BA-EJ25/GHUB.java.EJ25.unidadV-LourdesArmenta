@@ -3,7 +3,7 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 public class Aplicacion {
-    public Usuario login(String usrname, String password){
+    public Usuario login(String usrname, String password) {
         try{
             //abrimos el archivo de propiedades para lectura
             FileInputStream fis = new FileInputStream(("usuario.properties"));
@@ -24,17 +24,19 @@ public class Aplicacion {
             {
                 //instanciamos y setteamis todos los datos
                 u = new Usuario();
-                u.setNombreUsuario(usr);
+                u.setUserName(usr);
                 u.setContrasena(pwd);
                 u.setNombreUsuario(p.getProperty("nombre"));
                 u.setEmail(p.getProperty("email"));  
             }
             //retornamos la instancia o null si no entramos al if
-            return u;
+           return u;
            
         }catch( Exception ex){
             //cualquier error "salgo por exception"
+            //throw new RuntimeException("Error verificando datos",ex);
             throw new RuntimeException("Error verificando datos",ex);
+
         }
     }
     

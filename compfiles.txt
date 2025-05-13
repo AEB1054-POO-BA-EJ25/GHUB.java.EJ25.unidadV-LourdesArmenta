@@ -1,3 +1,4 @@
+./miPrincipal/ErrorFisicoException.java
 ./miPrincipal/Principal.java
 ./miPrincipal/Usuario.java
 ./miPrincipal/TestException.java

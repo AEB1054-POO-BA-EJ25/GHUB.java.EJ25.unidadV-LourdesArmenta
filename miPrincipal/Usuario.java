@@ -4,15 +4,12 @@ public class Usuario {
     private String nombreUsuario;
     private String contrasena;
     private String email;
+    private String userName;
     
     public Usuario() {
     }
 
-    public Usuario(String nombreUsuario, String contrasena, String email) {
-        this.nombreUsuario = nombreUsuario;
-        this.contrasena = contrasena;
-        this.email = email;
-    }
+   
 
     public String getNombreUsuario() {
         return nombreUsuario;
@@ -37,10 +34,20 @@ public class Usuario {
     public void setEmail(String email) {
         this.email = email;
     }
+    
 
     @Override
     public String toString() {
-        return nombreUsuario= " " + email;
+        
+        return this.nombreUsuario +" " + this.email;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     
