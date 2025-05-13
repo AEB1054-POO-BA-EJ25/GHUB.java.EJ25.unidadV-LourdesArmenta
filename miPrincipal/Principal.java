@@ -26,8 +26,14 @@ public class Principal {
             
             Usuario u = app.login(username, password);
             //mostramos el resultado<z
+            if (u == null)
+               System.out.println("Acceso denegado !");
+            else{
+                System.out.println("Bienvenido!!");
+                System.out.println(u);
+            }
            
-            System.out.println(u);
+            
         } catch(Exception ex){
             //ocurrio un error
             System.out.println("Servicio temporalmente interrumpido");

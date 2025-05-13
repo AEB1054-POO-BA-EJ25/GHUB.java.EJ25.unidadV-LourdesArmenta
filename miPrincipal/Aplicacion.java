@@ -3,7 +3,7 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 public class Aplicacion {
-    public Usuario login(String usrname, String password) {
+    public Usuario login(String usrname, String password) throws ErrorFisicoException{
         try{
             //abrimos el archivo de propiedades para lectura
             FileInputStream fis = new FileInputStream(("usuario.properties"));
@@ -35,8 +35,10 @@ public class Aplicacion {
         }catch( Exception ex){
             //cualquier error "salgo por exception"
           
-            throw new RuntimeException("Error verificando datos",ex);
+            //throw new RuntimeException("Error verificando datos",ex);
             // throw new RuntimeException("Error verificando datos");
+            throw new ErrorFisicoException(ex);
+
 
         }
     }
