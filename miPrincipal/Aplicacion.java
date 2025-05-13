@@ -34,8 +34,9 @@ public class Aplicacion {
            
         }catch( Exception ex){
             //cualquier error "salgo por exception"
-            //throw new RuntimeException("Error verificando datos",ex);
+          
             throw new RuntimeException("Error verificando datos",ex);
+            // throw new RuntimeException("Error verificando datos");
 
         }
     }

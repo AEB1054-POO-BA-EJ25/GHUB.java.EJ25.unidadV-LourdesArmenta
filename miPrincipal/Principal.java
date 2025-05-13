@@ -35,8 +35,6 @@ public class Principal {
         } 
     }
        
-        
-    
     private static String leerContrasena() {
         Console console = System.console();
         if (console == null) {
