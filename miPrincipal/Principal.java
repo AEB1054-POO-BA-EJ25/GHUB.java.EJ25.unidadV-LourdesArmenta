@@ -47,6 +47,7 @@ public class Principal {
             System.out.println("No se puede acceder a la consola.");
             return "";
         }
+        
 
         char[] passwordArray = console.readPassword(); // Oculta la entrada y muestra asteriscos
         return new String(passwordArray);

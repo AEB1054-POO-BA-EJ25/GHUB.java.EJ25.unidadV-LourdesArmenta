@@ -1,3 +1,5 @@
+./miPrincipal/MiExcepcionPersonalizada.java
+./miPrincipal/TestException2.java
 ./miPrincipal/ErrorFisicoException.java
 ./miPrincipal/Principal.java
 ./miPrincipal/Usuario.java
